@@ -1,0 +1,24 @@
+spring:
+  main:
+    banner-mode: "off"
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+  flyway:
+    enabled: true
+    clean-on-validation-error: true
+    url: jdbc:mysql://localhost:3306/survey
+    user: survey_user
+    password: survey_password
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/survey
+    user: survey_user
+    password: survey_password
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 20
+
+server:
+  shutdown: graceful
+  servlet:
+    context-path: /survey

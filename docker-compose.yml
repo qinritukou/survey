@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:8.0.22
+    environment:
+      MYSQL_ROOT_PASSWORD: Hv5AsYzzGx8DtVLm
+      MYSQL_DATABASE: survey
+      MYSQL_USER: survey_user
+      MYSQL_PASSWORD: survey_password
+    ports:
+      - "3306:3306"
+    command:
+      --character-set-server=utf8mb4
