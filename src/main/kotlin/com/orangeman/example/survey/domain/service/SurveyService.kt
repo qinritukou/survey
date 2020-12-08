@@ -1,0 +1,48 @@
+package com.orangeman.example.survey.domain.service
+
+import com.orangeman.example.survey.automake.domain.SurveiesRecord
+import com.orangeman.example.survey.domain.model.survey.SurveyNotExistException
+import com.orangeman.example.survey.domain.repository.SurveyRepository
+import com.orangeman.example.survey.web.apis.dtos.request.CreateUpdateSurveyRequestDto
+import com.orangeman.example.survey.web.apis.dtos.response.SurveyResponseDto
+import org.springframework.stereotype.Service
+
+@Service
+class SurveyService(
+    private val surveyRepository: SurveyRepository
+) {
+
+    fun create(createUpdateSurveyRequestDto: CreateUpdateSurveyRequestDto, createdBy: Long): Int {
+        val record = SurveiesRecord().also {
+            it.title = createUpdateSurveyRequestDto.title
+            it.createdBy = createdBy
+        }
+        return surveyRepository.create(record)
+    }
+
+    fun update(createUpdateSurveyRequestDto: CreateUpdateSurveyRequestDto, createdBy: Long): Int {
+        surveyRepository.findBySurveyIdAndCreatedBy(createUpdateSurveyRequestDto.surveyId, createdBy) ?: throw SurveyNotExistException()
+        val record = SurveiesRecord().also {
+            it.surveyId = createUpdateSurveyRequestDto.surveyId
+            it.title = createUpdateSurveyRequestDto.title
+            it.createdBy = createdBy
+        }
+        return surveyRepository.update(record)
+    }
+
+    fun del(surveyId: Long, createdBy: Long): Int {
+        surveyRepository.findBySurveyIdAndCreatedBy(surveyId, createdBy) ?: throw SurveyNotExistException()
+        return surveyRepository.del(surveyId)
+    }
+
+    fun findByCreatedBy(createdBy: Long): List<SurveyResponseDto> {
+        val recordList = surveyRepository.findByCreatedBy(createdBy)
+        return recordList.map {
+            SurveyResponseDto(
+                surveyId = it.surveyId!!,
+                title = it.title!!
+            )
+        }
+    }
+
+}

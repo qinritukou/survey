@@ -10,6 +10,14 @@ object ResponseResult {
         return ResponseEntity.status(201).build()
     }
 
+    fun updated(): ResponseEntity<ApiResult> {
+        return ResponseEntity.status(202).build()
+    }
+
+    fun deleted(): ResponseEntity<ApiResult> {
+        return ResponseEntity.status(204).build()
+    }
+
     fun ok(): ResponseEntity<ApiResult> {
         return ResponseEntity.ok().build()
     }

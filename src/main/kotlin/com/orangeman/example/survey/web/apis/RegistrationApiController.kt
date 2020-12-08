@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class RegistrationApiController(
-        private val userService: UserService
+    private val userService: UserService
 ) {
 
     @PostMapping("/api/registrations")
