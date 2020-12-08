@@ -12,7 +12,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/survey
-    user: survey_user
+    username: survey_user
     password: survey_password
     hikari:
       minimum-idle: 1
@@ -21,4 +21,4 @@ spring:
 server:
   shutdown: graceful
   servlet:
-    context-path: /survey
+    context-path: /

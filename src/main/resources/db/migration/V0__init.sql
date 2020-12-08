@@ -4,7 +4,8 @@ CREATE TABLE IF NOT EXISTS `survey`.`publishers` (
   `password` CHAR(64) NOT NULL DEFAULT '',
   `created_at` DATETIME NOT NULL DEFAULT now(),
   PRIMARY KEY (`publisher_id`),
-  UNIQUE INDEX `publisher_id_UNIQUE` (`publisher_id` ASC))
+  UNIQUE INDEX `publisher_id_UNIQUE` (`publisher_id` ASC),
+  UNIQUE KEY `email_UNIQUE` (`email`))
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `survey`.`surveies` (
