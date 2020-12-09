@@ -55,7 +55,7 @@ class SurveyController(
     }
 
     @DeleteMapping("/{surveyId}")
-    fun update(
+    fun del(
             @CurrentUser currentUser: SimpleUser,
             @PathVariable(value = "surveyId") surveyId: Long,
     ): ResponseEntity<ApiResult> {

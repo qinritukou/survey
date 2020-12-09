@@ -2,13 +2,15 @@ package com.orangeman.example.survey.domain.repository
 
 import com.orangeman.example.survey.automake.domain.QuestionsRecord
 import com.orangeman.example.survey.automake.mapper.*
+import com.orangeman.example.survey.domain.repository.mapper.CustomQuestionsMapper
 import org.mybatis.dynamic.sql.SqlBuilder
 import org.mybatis.dynamic.sql.util.kotlin.mybatis3.selectList
 import org.springframework.stereotype.Repository
 
 @Repository
 class QuestionRepository(
-    private val questionsMapper: QuestionsMapper
+    private val questionsMapper: QuestionsMapper,
+    private val customQuestionsMapper: CustomQuestionsMapper
 ) {
 
     fun create(questionsRecord: QuestionsRecord): Int {
