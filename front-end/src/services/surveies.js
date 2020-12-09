@@ -15,6 +15,18 @@ export default {
     })
   },
   /**
+   * Get One Survey by surveyId
+   */
+  getSurvey(surveyId) {
+    return new Promise((resolve, reject) => {
+      axios.get(`/surveies/${surveyId}`).then(({data}) => {
+        resolve(data)
+      }).catch((error) => {
+        reject(errorParser.parse(error))
+      })
+    })
+  },
+  /**
    * Create survey
    */
   create (survey) {

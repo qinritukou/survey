@@ -22,6 +22,12 @@ class SurveyController(
             @CurrentUser currentUser: SimpleUser
     ): List<SurveyResponseDto> = surveyService.findByCreatedBy(currentUser.publisherId)
 
+    @GetMapping("/{surveyId}")
+    fun getSurvey(
+            @PathVariable(value = "surveyId") surveyId: Long,
+    ): SurveyResponseDto = surveyService.findBySurveyId(surveyId)
+
+
     @PostMapping()
     fun create(
             @CurrentUser currentUser: SimpleUser,
