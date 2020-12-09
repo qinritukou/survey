@@ -48,4 +48,16 @@ class SurveyRepository(
         and(SurveiesDynamicSqlSupport.Surveies.createdBy, SqlBuilder.isEqualTo(createdBy))
     }.firstOrNull()
 
+    fun findBySurveyId(surveyId: Long): SurveiesRecord? = selectList(
+            surveiesMapper::selectMany,
+            listOf(
+                    SurveiesDynamicSqlSupport.Surveies.surveyId,
+                    SurveiesDynamicSqlSupport.Surveies.title,
+                    SurveiesDynamicSqlSupport.Surveies.createdBy,
+            ),
+            SurveiesDynamicSqlSupport.Surveies
+    ) {
+        where(SurveiesDynamicSqlSupport.Surveies.surveyId, SqlBuilder.isEqualTo(surveyId))
+    }.firstOrNull()
+
 }

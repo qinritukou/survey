@@ -45,4 +45,12 @@ class SurveyService(
         }
     }
 
+    fun findBySurveyId(surveyId: Long): SurveyResponseDto {
+        val record = surveyRepository.findBySurveyId(surveyId) ?: throw SurveyNotExistException()
+        return SurveyResponseDto(
+            surveyId = record.surveyId!!,
+            title = record.title!!
+        )
+    }
+
 }

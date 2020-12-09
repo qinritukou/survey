@@ -2,12 +2,10 @@
   <div class="container">
     <div><h1 class="page-title">My Survey List</h1></div>
     <div class="row">
-      <div class="list-inline-item" >
-        <button class="btn btn-primary" @click="createSurvey()">
-          <font-awesome-icon icon="plus" />
-          Create New Survery
-        </button>
-      </div>
+      <button class="btn btn-primary" @click="createSurvey()">
+        <font-awesome-icon icon="plus" />
+        Create New Survery
+      </button>
     </div>
     <div class="row" style="margin-top: 10px;" v-for="survey in surveies" v-bind:key="survey.surveyId">
       <div class="card col-md-12">
@@ -76,7 +74,11 @@ export default {
       surveyService.delete(survey.surveyId).then(data => {
         this.loadSurveies()
       })
-    }
+    },
+    gotoQuestionPage (survey) {
+      this.$router.push({name: 'survey', params: {surveyId: survey.surveyId}})
+    },
+
   }
 }
 </script>
