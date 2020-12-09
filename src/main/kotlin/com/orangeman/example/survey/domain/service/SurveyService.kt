@@ -20,12 +20,12 @@ class SurveyService(
         return surveyRepository.create(record)
     }
 
-    fun update(createUpdateSurveyRequestDto: CreateUpdateSurveyRequestDto, createdBy: Long): Int {
-        surveyRepository.findBySurveyIdAndCreatedBy(createUpdateSurveyRequestDto.surveyId, createdBy) ?: throw SurveyNotExistException()
+    fun update(createUpdateSurveyRequestDto: CreateUpdateSurveyRequestDto, updatedBy: Long): Int {
+        surveyRepository.findBySurveyId(createUpdateSurveyRequestDto.surveyId) ?: throw SurveyNotExistException()
         val record = SurveiesRecord().also {
             it.surveyId = createUpdateSurveyRequestDto.surveyId
             it.title = createUpdateSurveyRequestDto.title
-            it.createdBy = createdBy
+            it.modifiedBy = updatedBy
         }
         return surveyRepository.update(record)
     }
