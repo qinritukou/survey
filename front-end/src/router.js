@@ -4,6 +4,7 @@ import HomePage from '@/views/HomePage'
 import LoginPage from '@/views/LoginPage'
 import RegisterPage from '@/views/RegisterPage'
 import SurveyPage from '@/views/SurveyPage'
+import OpenSurveyPage from '@/views/OpenSurveyPage'
 
 Vue.use(Router)
 
@@ -26,5 +27,9 @@ export default new Router({
     path: '/survey/:surveyId',
     name: 'survey',
     component: SurveyPage
+  }, {
+    path: '/open/survey/:surveyId',
+    name: 'openSurvey',
+    component: OpenSurveyPage
   }]
 })

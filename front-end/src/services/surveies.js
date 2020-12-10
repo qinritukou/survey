@@ -27,6 +27,19 @@ export default {
     })
   },
   /**
+   * Get One Survey by surveyId
+   * This is method is open, do not need to be authenticated
+   */
+  getOpenSurvey(surveyId) {
+    return new Promise((resolve, reject) => {
+      axios.get(`/open/surveies/${surveyId}`).then(({data}) => {
+        resolve(data)
+      }).catch((error) => {
+        reject(errorParser.parse(error))
+      })
+    })
+  },
+  /**
    * Create survey
    */
   create (survey) {
