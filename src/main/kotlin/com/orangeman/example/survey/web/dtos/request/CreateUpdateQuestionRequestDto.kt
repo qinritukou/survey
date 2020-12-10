@@ -1,4 +1,4 @@
-package com.orangeman.example.survey.web.apis.dtos.request
+package com.orangeman.example.survey.web.dtos.request
 
 data class CreateUpdateQuestionRequestDto(
     val surveyId: Long,

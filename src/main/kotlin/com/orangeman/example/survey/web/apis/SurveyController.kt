@@ -1,11 +1,10 @@
 package com.orangeman.example.survey.web.apis
 
-import com.orangeman.example.survey.automake.domain.SurveiesRecord
 import com.orangeman.example.survey.config.authenticate.model.CurrentUser
 import com.orangeman.example.survey.domain.model.user.SimpleUser
 import com.orangeman.example.survey.domain.service.SurveyService
-import com.orangeman.example.survey.web.apis.dtos.request.CreateUpdateSurveyRequestDto
-import com.orangeman.example.survey.web.apis.dtos.response.SurveyResponseDto
+import com.orangeman.example.survey.web.dtos.request.CreateUpdateSurveyRequestDto
+import com.orangeman.example.survey.web.dtos.response.SurveyResponseDto
 import com.orangeman.example.survey.web.results.ApiResult
 import com.orangeman.example.survey.web.results.ResponseResult
 import org.springframework.http.ResponseEntity

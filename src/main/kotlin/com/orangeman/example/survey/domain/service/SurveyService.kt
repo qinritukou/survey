@@ -3,8 +3,8 @@ package com.orangeman.example.survey.domain.service
 import com.orangeman.example.survey.automake.domain.SurveiesRecord
 import com.orangeman.example.survey.domain.model.survey.SurveyNotExistException
 import com.orangeman.example.survey.domain.repository.SurveyRepository
-import com.orangeman.example.survey.web.apis.dtos.request.CreateUpdateSurveyRequestDto
-import com.orangeman.example.survey.web.apis.dtos.response.SurveyResponseDto
+import com.orangeman.example.survey.web.dtos.request.CreateUpdateSurveyRequestDto
+import com.orangeman.example.survey.web.dtos.response.SurveyResponseDto
 import org.springframework.stereotype.Service
 
 @Service

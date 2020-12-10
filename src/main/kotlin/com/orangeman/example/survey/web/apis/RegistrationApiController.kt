@@ -1,7 +1,7 @@
 package com.orangeman.example.survey.web.apis
 
 import com.orangeman.example.survey.domain.service.UserService
-import com.orangeman.example.survey.web.apis.dtos.request.RegistrationRequestDto
+import com.orangeman.example.survey.web.dtos.request.RegistrationRequestDto
 import com.orangeman.example.survey.web.results.ApiResult
 import com.orangeman.example.survey.web.results.ResponseResult
 import org.springframework.http.ResponseEntity

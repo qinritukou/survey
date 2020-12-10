@@ -3,10 +3,9 @@ package com.orangeman.example.survey.web.apis
 import com.orangeman.example.survey.config.authenticate.model.CurrentUser
 import com.orangeman.example.survey.domain.model.user.SimpleUser
 import com.orangeman.example.survey.domain.service.OptionService
-import com.orangeman.example.survey.web.apis.dtos.request.CreateOptionRequestionDto
+import com.orangeman.example.survey.web.dtos.request.CreateOptionRequestionDto
 import com.orangeman.example.survey.web.results.ApiResult
 import com.orangeman.example.survey.web.results.ResponseResult
-import org.apache.ibatis.annotations.Delete
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import java.lang.Exception

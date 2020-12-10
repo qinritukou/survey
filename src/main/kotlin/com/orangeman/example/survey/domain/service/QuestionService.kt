@@ -3,9 +3,9 @@ package com.orangeman.example.survey.domain.service
 import com.orangeman.example.survey.automake.domain.QuestionsRecord
 import com.orangeman.example.survey.domain.repository.OptionRepository
 import com.orangeman.example.survey.domain.repository.QuestionRepository
-import com.orangeman.example.survey.web.apis.dtos.request.CreateUpdateQuestionRequestDto
-import com.orangeman.example.survey.web.apis.dtos.response.Option
-import com.orangeman.example.survey.web.apis.dtos.response.QuestionResponseDto
+import com.orangeman.example.survey.web.dtos.request.CreateUpdateQuestionRequestDto
+import com.orangeman.example.survey.web.dtos.response.Option
+import com.orangeman.example.survey.web.dtos.response.QuestionResponseDto
 import org.springframework.stereotype.Service
 
 @Service

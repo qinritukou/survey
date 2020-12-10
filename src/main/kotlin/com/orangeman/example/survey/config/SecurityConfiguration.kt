@@ -45,7 +45,10 @@ class SecurityConfiguration(
 
     companion object {
         val STATIC_IGNORING = arrayOf("/static/**", "/js/**", "/css/**", "/images/**", "/favicon.ico")
-        val PUBLIC = arrayOf("/error", "/login", "/logout", "/register", "/api/registrations")
+        val PUBLIC = arrayOf("/error", "/login", "/logout", "/register", "/api/registrations",
+                "/api/open/surveies", "/api/open/surveies/**",
+                "/api/open/surveies/**/questions",
+                "/api/open/answers")
     }
 
 }
