@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/api/open/surveies")
-class SurveyController(
+class SurveyOpenController(
     private val surveyService: SurveyService
 ) {
 

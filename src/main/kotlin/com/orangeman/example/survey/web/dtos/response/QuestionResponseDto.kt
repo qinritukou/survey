@@ -1,4 +1,4 @@
-package com.orangeman.example.survey.web.apis.dtos.response
+package com.orangeman.example.survey.web.dtos.response
 
 data class QuestionResponseDto(
     val surveyId: Long,

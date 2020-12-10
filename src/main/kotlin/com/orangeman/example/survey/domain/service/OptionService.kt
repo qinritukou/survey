@@ -2,7 +2,7 @@ package com.orangeman.example.survey.domain.service
 
 import com.orangeman.example.survey.automake.domain.OptionsRecord
 import com.orangeman.example.survey.domain.repository.OptionRepository
-import com.orangeman.example.survey.web.apis.dtos.request.CreateOptionRequestionDto
+import com.orangeman.example.survey.web.dtos.request.CreateOptionRequestionDto
 import org.springframework.stereotype.Service
 
 @Service

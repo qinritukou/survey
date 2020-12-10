@@ -3,7 +3,7 @@ package com.orangeman.example.survey.domain.service
 import com.orangeman.example.survey.domain.model.user.SimpleUser
 import com.orangeman.example.survey.domain.model.user.UsernameNotFoundException
 import com.orangeman.example.survey.domain.repository.PublisherRepository
-import com.orangeman.example.survey.web.apis.dtos.request.RegistrationRequestDto
+import com.orangeman.example.survey.web.dtos.request.RegistrationRequestDto
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.stereotype.Service
