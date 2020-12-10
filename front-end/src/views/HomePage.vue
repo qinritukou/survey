@@ -24,6 +24,10 @@
               <button class="btn btn-primary" @click="gotoQuestionPage(survey)">
                 Add Questions
               </button>
+              <button class="btn btn-primary" @click="gotoResultPage(survey)">
+                See Results
+              </button>
+
             </div>
           </div>
         </div>
@@ -78,7 +82,9 @@ export default {
     gotoQuestionPage (survey) {
       this.$router.push({name: 'survey', params: {surveyId: survey.surveyId}})
     },
-
+    gotoResultPage(survey) {
+      this.$router.push({name: 'surveyResult', params: {surveyId: survey.surveyId}})
+    }
   }
 }
 </script>
