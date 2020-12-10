@@ -7,4 +7,9 @@
 
 ### run the app
 1. `docker-compose up -d`
-2. `./gradlew :bootRun`
+2. BE: `./gradlew :bootRun`
+3. FE: `npm run serve` in front-end folder
+
+### about the app
+1. login page: http://localhost:3000/login
+2. answer the survey: http://localhost:3000/open/survey/{suveyId}

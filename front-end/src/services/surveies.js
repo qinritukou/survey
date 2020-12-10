@@ -15,6 +15,18 @@ export default {
     })
   },
   /**
+   * Get survey result
+   */
+  getSurveyResult(surveyId) {
+    return new Promise((resolve, reject) => {
+      axios.get(`/surveies/${surveyId}/result`).then(({data}) => {
+        resolve(data)
+      }).catch((error) => {
+        reject(errorParser.parse(error))
+      })
+    })
+  },
+  /**
    * Get One Survey by surveyId
    */
   getSurvey(surveyId) {
